@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title id="title">Error</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.discordhelper.gq/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordhelper.gq/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.discordhelper.gq/favicon-16x16.png">
+	<link rel="manifest" href="https://cdn.discordhelper.gq/site.webmanifest">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Huh?" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://cdn.discordhelper.gq/DiscordHelper.png" />
+	<meta property="og:description" content="Why is a thank you page shared?" />
+	<meta property="theme-color" content="#7289DA" />
+	<link rel="stylesheet" href="https://discordhelper.gq/style.css" />
+</head>
+
+<body>
+	<div class="topnav" id="navbar"><a href="/index"
+			style="text-decoration: none; color: #FFFFFF; float: left;">Home</a>
+		<a href="https://dantenl.tk/" style="text-decoration: none; color: #e6e6e6; float: right">My website</a>
+		<a href="/invite" style="text-decoration: none; color: #e6e6e6; float: right;">Invite</a>
+	</div>
+	<p id="alert"></p>
+	<div id="result">
+	<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+		<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+		<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+	</svg>
+	</div>
+	<p></p>
+	<h1 id="result1">Huh?</h1>
+	<h2 id="result2">You should not be seeing this. We're probably just updating the site, don't worry!</h2>
+
+	<script>
+		const queryString = new URLSearchParams(window.location.search);
+		const error = queryString.get('error');
+		const code = queryString.get('code');
+		const perms = queryString.get('permissions')
+		if (error) {
+			document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/cross.css" /><svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
+			document.getElementById('result1').innerHTML = `Error`
+			document.getElementById('result2').innerHTML = `You have most likely clicked "Cancel" when adding the bot. Don't worry! You can invite it again by clicking <a href="/invite">here</a>`
+			document.getElementById('title').innerHTML = `Error :/`
+		}
+		else {
+			if (code) {
+				if (perms !== "67529807") {
+					document.getElementById('alert').innerHTML = `<div class="alert"><span class="closebtn">&times;</span><strong>Hey!</strong> It appears you have not given permission for everything <a class="smallinvite" href="/invite"><strong>Invite again</strong></a></div>`
+				} else {
+					document.getElementById('alert').innerHTML = `<br>`	
+				}
+				document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/check.css" /> 	<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>`
+				document.getElementById('result1').innerHTML = `Thank you!`
+				document.getElementById('result2').innerHTML = `Thanks for inviting Discord Helper to your server!`
+				document.getElementById('title').innerHTML = `Thank you for inviting! <3`
+			} else {
+			document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/cross.css" /><svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
+			document.getElementById('result1').innerHTML = `Error`
+			document.getElementById('result2').innerHTML = `Don't go to this page without inviting the bot :/ If you want to see a checkmark on this page, you can always invite it <a href="/invite">here</a>`
+			document.getElementById('title').innerHTML = `Error :/`
+			}
+		}
+	</script>
+<script>
+	var close = document.getElementsByClassName("closebtn");
+	var i;
+
+	for (i = 0; i < close.length; i++) {
+		close[i].onclick = function () {
+			var div = this.parentElement;
+			div.style.opacity = "0";
+			setTimeout(function () { div.style.display = "none"; }, 600);
+		}
+	}
+</script>
+</body>
+
+</html>
