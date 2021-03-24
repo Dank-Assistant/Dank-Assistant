@@ -11,14 +11,14 @@
 	<meta property="theme-color" content="#509624" />
 	<style>
 body {
-	background-color: #2C2F33;
+	background-color: #509624;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	text-align: center;
 	color: #fff;
 }
 
 a {
-	color: #509624;
+	color: #2c2f33;
 	text-decoration: none;
 }
 
@@ -88,7 +88,7 @@ hr {
 	</div>
 	<p></p>
 	<h1 id="result1">Huh?</h1>
-	<h2 id="result2">You should not be seeing this. We're probably just updating the site, don't worry!</h2>
+	<h2 id="result2">You should not be seeing this. We're probably deploying updates to the site right now.</h2>
 
 	<script>
 		const queryString = new URLSearchParams(window.location.search);
@@ -98,8 +98,8 @@ hr {
 		if (error) {
 			document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/cross.css" /><svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
 			document.getElementById('result1').innerHTML = `Error`
-			document.getElementById('result2').innerHTML = `You have most likely clicked "Cancel" when adding the bot. Don't worry! You can invite it again by clicking <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=18432&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.itschris.tk%2Fthanks">here</a>`
-			document.getElementById('title').innerHTML = `Error :/`
+			document.getElementById('result2').innerHTML = `You have clicked "Cancel" when inviting me. You can invite it again by clicking <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=18432&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here.</a>`
+			document.getElementById('title').innerHTML = `Error`
 		}
 		else {
 			if (code) {
@@ -111,12 +111,12 @@ hr {
 				document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/chrischeck.css" /> 	<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>`
 				document.getElementById('result1').innerHTML = `Thank you for inviting Dank Assistant to your server!`
 				document.getElementById('result2').innerHTML = `Support server link here | docs here `
-				document.getElementById('title').innerHTML = `Thanks for inviting Dank Assistant`
+				document.getElementById('title').innerHTML = `Thanks You!`
 			} else {
 				document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/chriscross.css" /><svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
 				document.getElementById('result1').innerHTML = `Error`
-				document.getElementById('result2').innerHTML = `Don't go to this page without inviting the bot :/ If you want to see a checkmark on this page, you can always invite it <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=18432&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.itschris.tk%2Fthanks">here</a>`
-				document.getElementById('title').innerHTML = `Error :/`
+				document.getElementById('result2').innerHTML = `This page is not designed to be visited. Invite the bot via <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=18432&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here</a>.`
+				document.getElementById('title').innerHTML = `Error`
 			}
 		}
 	</script>
