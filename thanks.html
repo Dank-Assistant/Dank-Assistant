@@ -98,13 +98,13 @@ hr {
 		if (error) {
 			document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/cross.css" /><svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
 			document.getElementById('result1').innerHTML = `Error`
-			document.getElementById('result2').innerHTML = `You have clicked "Cancel" when inviting me. You can invite it again by clicking <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=18432&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here.</a>`
+			document.getElementById('result2').innerHTML = `You have clicked "Cancel" when inviting me. You can invite it again by clicking <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here.</a>`
 			document.getElementById('title').innerHTML = `Error`
 		}
 		else {
 			if (code) {
-				if (perms !== "18432") {
-					document.getElementById('alert').innerHTML = `<div class="alert"><span class="closebtn">&times;</span><strong>Hey!</strong> It appears you have not given permission for everything <a class="smallinvite" href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=18432&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.itschris.tk%2Fthanks"><strong>Invite again</strong></a></div>`
+				if (perms !== "347200") {
+					document.getElementById('alert').innerHTML = `<div class="alert"><span class="closebtn">&times;</span><strong>Hey!</strong> It appears you have not given permission for everything <a class="smallinvite" href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.itschris.tk%2Fthanks"><strong>Invite again</strong></a></div>`
 				} else {
 					document.getElementById('alert').innerHTML = `<br>`
 				}
@@ -115,7 +115,7 @@ hr {
 			} else {
 				document.getElementById('result').innerHTML = `<link rel="stylesheet" href="https://discordhelper.gq/chriscross.css" /><svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
 				document.getElementById('result1').innerHTML = `Error`
-				document.getElementById('result2').innerHTML = `This page is not designed to be visited. Invite the bot via <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=18432&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here</a>.`
+				document.getElementById('result2').innerHTML = `This page is not designed to be visited. Invite the bot via <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here</a>.`
 				document.getElementById('title').innerHTML = `Error`
 			}
 		}
