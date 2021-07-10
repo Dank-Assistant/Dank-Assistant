@@ -113,12 +113,19 @@ border-radius: 10px;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   }
-  code {
+	
+code {
   font-family: Consolas,"courier new";
   color: #ffffff;
   background-color: #36393e;
   padding: 2px;
-  font-size: 105%;
+}
+	
+footer {
+  position:absolute;
+  width:100%;
+  bottom:0px;
+  opacity: 0.7;
 }
 </style>
 <body>
@@ -138,7 +145,7 @@ border-radius: 10px;
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
-  <label class="container">Join our <a onclick="checked="checked"" href="https://discord.gg/danks" target="_blank">support server</a>
+  <label class="container">Join our <a href="https://discord.gg/danks" target="_blank">support server</a>
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
@@ -146,10 +153,11 @@ border-radius: 10px;
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
-  <label class="container">Check out our <a href="https://www.patreon.com/join/DankAssistantBot" target="_blank">Patreonhttps://www.patreon.com/join/DankAssistantBot</a>
+  <label class="container">Check out our <a href="https://www.patreon.com/join/DankAssistantBot" target="_blank">Patreon</a>
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
+	<footer>This page is open source on <a href="https://github.com/DevChrisChan/Dank-Assistant/" target="_blank">GitHub</a>
 
   <script>
 		const queryString = new URLSearchParams(window.location.search);
