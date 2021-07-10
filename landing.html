@@ -25,16 +25,33 @@
 <style>
   body {
     font-family: system-ui;
-    text-align: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
   }
   h1 {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 50px;
+    text-align: center;
   }
     h2 {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 30px;
+    text-align: center;
   }
+	
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .container {
   display: block;
   position: relative;
@@ -106,7 +123,7 @@ border-radius: 10px;
 <body>
   <h1 id="errorh1">THANK YOU</h1>
   <h2 id="errormsg">Dank Assistant has been added into your server.</h2>
-  <p id="wrongperms"></p>
+  <p id="wrongperms" style="text-align: center;"></p>
   <hr>
   <label class="container">Invite Dank Assistant
   <input type="checkbox" checked="checked" onclick="return false;">
