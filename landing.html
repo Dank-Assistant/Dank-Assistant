@@ -107,7 +107,7 @@ border-radius: 10px;
 <body>
   <h1 id="errorh1">THANK YOU</h1>
   <h2 id="errormsg">Dank Assistant has been added into your server.</h2>
-  <h2 id="wrongperms"></h2>
+  <p id="wrongperms"></p>
   <hr>
   <label class="container">Invite Dank Assistant
   <input type="checkbox" checked="checked" onclick="return false;">
@@ -137,7 +137,7 @@ border-radius: 10px;
 		else {
 			if (code) {
 				if (perms !== "347200") {
-					document.getElementById('wrongperms').innerHTML = `<div class="alert"><span class="closebtn">&times;</span><strong>Hey!</strong> It appears you have not given permission for everything <a class="smallinvite" href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.itschris.tk%2Fthanks"><strong>Invite again</strong></a></div>`
+					document.getElementById('wrongperms').innerHTML = `You have not given permission for everything.<br> <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">Invite again</a></div>`
 				} else {
 					document.getElementById('wrongperms').innerHTML = `<br>`
 				}
