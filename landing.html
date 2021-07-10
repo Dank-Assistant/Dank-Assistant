@@ -107,8 +107,9 @@ border-radius: 10px;
 }
 </style>
 <body>
-  <h1>Thank you.</h1>
+  <h1 id="errorh1">Thank you.</h1>
   <h2>Dank Assistant has been added into your server.</h2>
+  <h2 id="wrongperms"></h2>
   <hr>
   <label class="container">Invite Dank Assistant
   <input type="checkbox" checked="checked" onclick="return false;">
@@ -126,5 +127,24 @@ border-radius: 10px;
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
+  <script>
+		const queryString = new URLSearchParams(window.location.search);
+		const error = queryString.get('error');
+		const code = queryString.get('code');
+		const perms = queryString.get('permissions')
+		if (error) {
+      document.getElementById('errorh1').innerHTML = `There's an error while inivting Dank Assistant`
+			document.getElementById('errormsg').innerHTML = `You have cancelled the invite process. If it was a mistake, you can invite it again by clicking <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here.</a>`
+		}
+		else {
+			if (code) {
+				if (perms !== "347200") {
+					document.getElementById('wrongperms').innerHTML = `<div class="alert"><span class="closebtn">&times;</span><strong>Hey!</strong> It appears you have not given permission for everything <a class="smallinvite" href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.itschris.tk%2Fthanks"><strong>Invite again</strong></a></div>`
+				} else {
+					document.getElementById('wrongperms').innerHTML = `<br>`
+				}
+      }
+		}
+	</script>
 </body>
 </html>
