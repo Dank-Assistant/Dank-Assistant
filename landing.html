@@ -179,7 +179,7 @@ code {
 <body>
 	<svg class="check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="check__circle" cx="26" cy="26" r="25" fill="none" /><path class="check__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
   <h1 id="errorh1">THANK YOU</h1>
-  <h2 id="errormsg">Dank Assistant has been added into your server.</h2>
+  <h2 id="errormsg"></h2>
   <p id="wrongperms" style="text-align: center;"></p>
 	<p style="font-size: 22px;">Here's something you can do:</p>
   <label class="container">Invite Dank Assistant
@@ -224,6 +224,9 @@ code {
 			if (code) {
 				if (perms !== "347200") {
 					document.getElementById('errormsg').innerHTML = `Dank Assistant has been added into your server, but minimal permissions are not given.<br> <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">Invite again.</a></div>`
+				} else {
+		document.getElementById('errormsg').innerHTML = `Dank Assistant has been added into your server.`
+				}
       }
 		}
 	</script>
