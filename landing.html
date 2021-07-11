@@ -265,16 +265,16 @@ code {
 		const code = queryString.get('code');
 		const perms = queryString.get('permissions')
 		if (error) {
-      document.getElementById('errorh1').innerHTML = `There's an error while inivting Dank Assistant`
-      document.getElementById('result').innerHTML = `<svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
-      document.getElementById('msg').innerHTML = `You have cancelled the invite process. If it was a mistake, you can invite it again by clicking <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here.</a>`
+      return document.getElementById('errorh1').innerHTML = `There's an error while inivting Dank Assistant`
+      return document.getElementById('result').innerHTML = `<svg class="crossmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="crossmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="crossmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" /></svg>`
+      return document.getElementById('msg').innerHTML = `You have cancelled the invite process. If it was a mistake, you can invite it again by clicking <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">here.</a>`
 		}
 		else {
 			if (code) {
 				if (perms !== "347200") {
-					document.getElementById('msg').innerHTML = `Dank Assistant has been added into your server, but minimal permissions are not given.<br> <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">Invite again.</a></div>`
+					return document.getElementById('msg').innerHTML = `Dank Assistant has been added into your server, but minimal permissions are not given.<br> <a href="https://discord.com/oauth2/authorize?client_id=815564870011453480&scope=bot%20applications.commands&permissions=347200&response_type=code&redirect_uri=https%3A%2F%2Fdankassistant.ga%2Fthanks">Invite again.</a></div>`
 				} else {
-		document.getElementById('msg').innerHTML = `Dank Assistant has been added into your server.`
+		return document.getElementById('msg').innerHTML = `Dank Assistant has been added into your server.`
 				}
       }
 		}
